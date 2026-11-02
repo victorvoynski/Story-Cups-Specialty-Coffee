@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="bg">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Story Cups Specialty Coffee · София</title>
+<meta name="description" content="Story Cups Specialty Coffee, спешълти кафе на ул. „Цар Иван Асен II“ 20, кв. Яворов, София. Brew your story.">
+<meta name="theme-color" content="#0f110f">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/geologica-cyrillic-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/img/s-coldbrew.webp" as="image">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<svg class="defs" aria-hidden="true" focusable="false">
+  <symbol id="logo" viewBox="0 0 100 112">
+    <path d="M70 6H41a12.5 12.5 0 0 0 0 25h12a12.5 12.5 0 0 1 0 25H34" fill="none" stroke="currentColor" stroke-width="8"/>
+    <path d="M18 48v22a22 22 0 0 0 22 22h10a22 22 0 0 0 22-22V48" fill="none" stroke="currentColor" stroke-width="8"/>
+    <path d="M72 55h5a11 11 0 0 1 0 22h-6" fill="none" stroke="currentColor" stroke-width="8"/>
+    <path d="M22 106h48" fill="none" stroke="currentColor" stroke-width="8"/>
+  </symbol>
+  <symbol id="spark" viewBox="0 0 40 40"><path d="M20 3v12M20 25v12M3 20h12M25 20h12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></symbol>
+  <symbol id="arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="ig" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.3" cy="6.7" r="1.2" fill="currentColor"/></symbol>
+  <symbol id="fb" viewBox="0 0 24 24"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v6h4v-6h3l1-4h-4V8.5a.5.5 0 0 1 .5-.5z" fill="currentColor"/></symbol>
+  <symbol id="pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="9.5" r="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+  <symbol id="phone" viewBox="0 0 24 24"><path d="M6.6 3.5l3 3.4-1.8 2.6a12 12 0 0 0 6.7 6.7l2.6-1.8 3.4 3-1.7 3A17 17 0 0 1 3.6 5.2z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+  <symbol id="paw" viewBox="0 0 32 32"><ellipse cx="9" cy="11" rx="3.2" ry="4.2"/><ellipse cx="16" cy="7.5" rx="3.2" ry="4.2"/><ellipse cx="23" cy="11" rx="3.2" ry="4.2"/><ellipse cx="26.5" cy="18" rx="2.8" ry="3.6"/><path d="M16 15c-5 0-9 6.5-9 10a3.5 3.5 0 0 0 5 3c1.4-.6 2.6-1 4-1s2.6.4 4 1a3.5 3.5 0 0 0 5-3c0-3.5-4-10-9-10z"/></symbol>
+  <symbol id="pause" viewBox="0 0 24 24"><path d="M8 5v14M16 5v14" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></symbol>
+  <symbol id="play" viewBox="0 0 24 24"><path d="M8 5l11 7-11 7z" fill="currentColor"/></symbol>
+</svg>
+
+<a class="skip" href="#menu" data-i18n="skip">Към менюто</a>
+
+<header class="top" id="top">
+  <a class="brand" href="#top" aria-label="Story Cups Specialty Coffee">
+    <svg class="brand-mark" aria-hidden="true"><use href="#logo"/></svg>
+    <span class="brand-word">Story Cups<small>Specialty Coffee</small></span>
+  </a>
+  <nav class="nav" aria-label="Main">
+    <a href="#menu" data-i18n="nav.menu">Меню</a>
+    <a href="#beans" data-i18n="nav.beans">Кафе на зърна</a>
+    <a href="#stories" data-i18n="nav.stories">Истории</a>
+    <a href="#visit" data-i18n="nav.visit">Ела</a>
+  </nav>
+  <div class="lang" role="group" aria-label="Language">
+    <button type="button" data-lang="bg" aria-pressed="true">BG</button>
+    <button type="button" data-lang="en" aria-pressed="false">EN</button>
+  </div>
+</header>
+
+<main>
+
+<!-- HERO: their Instagram stories / reels look -->
+<section class="hero" aria-labelledby="hero-title">
+  <div class="hero-copy">
+    <p class="eyebrow"><span class="dot"></span><span data-i18n="hero.eyebrow">Спешълти кафе · кв. Яворов, София</span></p>
+    <h1 id="hero-title" class="hero-title">
+      <span class="script">Brew</span>
+      <span class="big">your story.</span>
+    </h1>
+    <p class="hero-sub" data-i18n="hero.sub">Където всяка чаша разказва история. Ул. „Цар Иван Асен II“ 20, на няколко минути от Орлов мост.</p>
+    <div class="hero-cta">
+      <a class="btn btn-sage" href="#menu"><span data-i18n="cta.menu">Виж менюто</span><svg aria-hidden="true"><use href="#arrow"/></svg></a>
+      <a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&amp;query=Story%20Cups%20Specialty%20Coffee&amp;query_place_id=ChIJQ7uGRQCFqkARFrf8vcHq7A4" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#pin"/></svg><span data-i18n="cta.directions">Упътване</span></a>
+    </div>
+    <p class="rating"><b>5.0</b> <span class="stars" aria-hidden="true">★★★★★</span> <span data-i18n="hero.rating">в Google · 279 отзива</span></p>
+  </div>
+
+  <div class="story" id="story" tabindex="0" aria-roledescription="carousel" aria-label="Story Cups stories">
+    <div class="story-bars" aria-hidden="true"></div>
+    <div class="story-head">
+      <span class="story-avatar"><svg aria-hidden="true"><use href="#logo"/></svg></span>
+      <span class="story-handle">storycups.specialtycoffee</span>
+      <button class="story-toggle" type="button" aria-label="Pause"><svg class="i-pause" aria-hidden="true"><use href="#pause"/></svg><svg class="i-play" aria-hidden="true"><use href="#play"/></svg></button>
+    </div>
+    <div class="story-slides">
+      <figure class="slide is-active">
+        <img src="assets/img/s-coldbrew.webp" alt="Cold brew with an orange slice on ice" width="720" height="1280">
+        <figcaption><b>Cold. Brew.</b><i class="script">repeat.</i></figcaption>
+      </figure>
+      <figure class="slide">
+        <img src="assets/img/s-pumpkin.webp" alt="Pumpkin spice latte with latte art on a wooden tray" width="720" height="1280" loading="lazy">
+        <figcaption><b>No tricks.</b><i class="script">just pumpkin.</i></figcaption>
+      </figure>
+      <figure class="slide">
+        <img src="assets/img/s-shot.webp" alt="Espresso pulled on the machine at Story Cups" width="720" height="1280" loading="lazy">
+        <figcaption><b>The perfect shot.</b><small>1:2 ratio · 25 sec</small></figcaption>
+      </figure>
+      <figure class="slide">
+        <img src="assets/img/s-v60.webp" alt="Coffee blooming in a V60 filter" width="720" height="1280" loading="lazy">
+        <figcaption><b>Timing</b><i class="script">is everything.</i></figcaption>
+      </figure>
+      <figure class="slide">
+        <img src="assets/img/s-constant.webp" alt="Guest holding a cup of coffee" width="720" height="1280" loading="lazy">
+        <figcaption><b data-i18n="story.5a">Кафето</b><i class="script" data-i18n="story.5b">е константа.</i></figcaption>
+      </figure>
+    </div>
+    <button class="story-tap prev" type="button" aria-label="Previous"></button>
+    <button class="story-tap next" type="button" aria-label="Next"></button>
+  </div>
+</section>
+
+<!-- WHERE EVERY CUP TELLS A STORY (their Facebook cover scene) -->
+<section class="counter" aria-labelledby="counter-title">
+  <div class="counter-inner">
+    <div class="counter-copy reveal">
+      <h2 id="counter-title" class="h-xl" data-i18n="counter.title">Където всяка чаша <span class="script">разказва история.</span></h2>
+      <ul class="perks">
+        <li class="perk stamp"><b class="perk-k">01</b><p class="perk-t" data-i18n="perk.1t">Specialty coffee</p><p data-i18n="perk.1">Спешълти кафе с внимание към устойчивостта.</p></li>
+        <li class="perk stamp"><b class="perk-k">100+</b><p class="perk-t" data-i18n="perk.2t">Италиански блендове</p><p data-i18n="perk.2">Ексклузивни, от семейна италианска компания за кафе с над 100-годишна история.</p></li>
+        <li class="perk stamp"><b class="perk-k"><svg class="paw" aria-hidden="true"><use href="#paw"/></svg></b><p class="perk-t">Pet friendly</p><p data-i18n="perk.3">Ела заедно с кучето си.</p></li>
+        <li class="perk stamp"><b class="perk-k" data-i18n="perk.4k">Нд</b><p class="perk-t" data-i18n="perk.4t">И в неделя</p><p data-i18n="perk.4">От 1 ноември Story Cups работи и в неделя.</p></li>
+      </ul>
+    </div>
+    <img class="counter-ill" src="assets/img/baristas.webp" alt="" width="968" height="653" loading="lazy">
+  </div>
+  <div class="counter-band" aria-hidden="true"></div>
+</section>
+
+<!-- MENU: their real menu board, with a cup builder -->
+<section class="menu" id="menu" aria-labelledby="menu-title">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="kicker" data-i18n="menu.kicker">От дъската на бара</p>
+      <h2 id="menu-title" class="h-xl light">Coffee <span class="script">Menu</span></h2>
+      <p class="sec-lead" data-i18n="menu.lead">Избери напитка и виж чашата си: размер, цена и добавки.</p>
+    </div>
+
+    <div class="board reveal">
+      <div class="board-list">
+        <div class="board-top">
+          <span data-i18n="menu.drink">Напитка</span>
+        </div>
+        <ol class="drinks" id="drinks"></ol>
+        <p class="board-note"><span data-i18n="menu.note1">* Със specialty сорт</span> +<span class="js-extra">€0.70</span><br><span data-i18n="menu.note2">** С алтернативно мляко</span> +<span class="js-extra">€0.70</span></p>
+      </div>
+
+      <div class="cupcard" aria-live="polite">
+        <div class="cup-stage">
+          <svg class="cupsvg" id="cupsvg" viewBox="0 0 200 220" aria-hidden="true">
+            <defs>
+              <clipPath id="cupclip"><path id="cupclipPath" d="M40 60h120l-10 120a20 20 0 0 1-20 18H70a20 20 0 0 1-20-18z"/></clipPath>
+            </defs>
+            <g clip-path="url(#cupclip)">
+              <rect id="cupLiquid" x="0" y="200" width="200" height="200" class="liquid"/>
+              <rect id="cupFoam" x="0" y="196" width="200" height="8" class="foam"/>
+            </g>
+            <path id="cupOutline" class="cup-outline" d="M40 60h120l-10 120a20 20 0 0 1-20 18H70a20 20 0 0 1-20-18z"/>
+            <path id="cupHandle" class="cup-outline" d="M157 90h10a20 20 0 0 1 0 40h-13"/>
+            <path class="cup-saucer" id="cupSaucer" d="M30 208h140"/>
+            <g id="steam" class="steam"><path d="M85 48c-8-10 8-14 0-26"/><path d="M110 48c-8-10 8-14 0-26"/></g>
+          </svg>
+          <span class="ml" id="cupMl">240 ml</span>
+        </div>
+        <div class="cup-info">
+          <p class="cup-name" id="cupName">Cappuccino</p>
+          <p class="cup-price" id="cupPrice">€2.60</p>
+          <div class="addons">
+            <label class="switch"><input type="checkbox" id="optSpec"><span class="track"></span><span data-i18n="menu.spec">Specialty сорт</span> <em class="js-extra">+€0.70</em></label>
+            <label class="switch"><input type="checkbox" id="optMilk"><span class="track"></span><span data-i18n="menu.milk">Алтернативно мляко</span> <em class="js-extra">+€0.70</em></label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="seasonal reveal">
+      <figure class="season-photo"><img src="assets/img/s-pumpkin.webp" alt="Pumpkin spice latte" width="720" height="1280" loading="lazy"></figure>
+      <div class="season-copy">
+        <p class="kicker" data-i18n="season.kicker">Сезонно · питай на бара</p>
+        <h3 class="h-lg">Pumpkin Spice Latte</h3>
+        <p data-i18n="season.text">Домашно приготвен тиквен сироп, ароматни подправки и кадифено кафе. Кажи ни дали е love at first sip.</p>
+        <ul class="tags">
+          <li>Pumpkin Spice Matcha</li>
+          <li>Espresso Tonic</li>
+          <li>Cold Brew Tonic</li>
+          <li>Matcha Latte</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BEANS -->
+<section class="beans" id="beans" aria-labelledby="beans-title">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="kicker light" data-i18n="beans.kicker">Кафе на зърна · 100% арабика</p>
+      <h2 id="beans-title" class="h-xl light" data-i18n="beans.title">Вземи историята <span class="script">у дома.</span></h2>
+    </div>
+  </div>
+  <div class="shelf" id="shelf" tabindex="0" aria-label="Coffee bags">
+    <article class="bag">
+      <div class="bag-img"><img src="assets/img/bag-house.webp" alt="Story Cups House Blend coffee bag" width="640" height="880" loading="lazy"></div>
+      <h3>House Blend</h3><p data-i18n="bag.house">Фирменият бленд на Story Cups</p>
+    </article>
+    <article class="bag is-best">
+      <div class="bag-img"><img src="assets/img/bag-mexico.webp" alt="Story Cups Mexico SHG Prime coffee bag" width="640" height="880" loading="lazy"><span class="badge" data-i18n="bag.best">Бестселър</span></div>
+      <h3>Mexico SHG Prime</h3><p data-i18n="bag.mexico">Нашият бестселър</p>
+    </article>
+    <article class="bag">
+      <div class="bag-img"><img src="assets/img/bag-colombia.webp" alt="Story Cups Colombia Huila coffee bag" width="640" height="880" loading="lazy"></div>
+      <h3>Colombia Huila</h3><p data-i18n="bag.origin">Specialty coffee</p>
+    </article>
+    <article class="bag">
+      <div class="bag-img"><img src="assets/img/bag-rwanda.webp" alt="Story Cups Rwanda Kayumbu coffee bag" width="640" height="880" loading="lazy"></div>
+      <h3>Rwanda Kayumbu</h3><p data-i18n="bag.origin2">Specialty coffee</p>
+    </article>
+    <article class="bag">
+      <div class="bag-img"><img src="assets/img/bag-honduras.webp" alt="Story Cups Honduras Dona Elda coffee bag" width="640" height="880" loading="lazy"></div>
+      <h3>Honduras Dona Elda</h3><p data-i18n="bag.origin3">Specialty coffee</p>
+    </article>
+  </div>
+  <div class="wrap shelf-foot">
+    <div class="shelf-dots" id="shelfDots" aria-hidden="true"></div>
+    <p class="shelf-note" data-i18n="beans.note">Питай на бара или поръчай онлайн от <a href="https://coffeebox.bg/collections/story-cups-specialty-coffee" target="_blank" rel="noopener">Coffeebox.bg</a>.</p>
+  </div>
+</section>
+
+<!-- PULL A STORY -->
+<section class="pull" id="stories" aria-labelledby="pull-title">
+  <div class="wrap pull-grid">
+    <div class="pull-copy reveal">
+      <p class="kicker" data-i18n="pull.kicker">На щанда ни всеки тегли своята история</p>
+      <h2 id="pull-title" class="h-xl" data-i18n="pull.title">Изтегли <span class="script">история.</span></h2>
+      <p class="sec-lead" data-i18n="pull.lead">Малки истории от бара, точно както ги разказваме в Instagram.</p>
+      <button class="btn btn-ink" type="button" id="pullBtn"><span data-i18n="pull.btn">Изтегли следващата</span><svg aria-hidden="true"><use href="#arrow"/></svg></button>
+      <p class="pull-count" id="pullCount" aria-live="polite">01 / 08</p>
+    </div>
+    <div class="deck" id="deck" role="button" tabindex="0" aria-label="Pull a story"></div>
+  </div>
+</section>
+
+<!-- MOMENTS -->
+<section class="moments" aria-labelledby="moments-title">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="kicker" data-i18n="mom.kicker">Извън чашата</p>
+      <h2 id="moments-title" class="h-xl" data-i18n="mom.title">Good coffee, good people, <span class="script">good stories.</span></h2>
+    </div>
+    <ol class="timeline">
+      <li class="ev is-next reveal">
+        <div class="ev-date"><span class="ev-flag" data-i18n="mom.next">Предстои</span><b>21.11</b><small>2026</small></div>
+        <div class="ev-card stamp">
+          <p class="ev-title">Pop-up: The Coffee Edit</p>
+          <p data-i18n="mom.e1">Story Cups × Cooltura. Събота, 10:00 – 17:00, София, Васил Левски 59. Pop-up ексклузивно: Mont Blanc и Pumpkin Spice Matcha, кафе куиз с награди и безплатна дегустация на бестселъра ни Mexico SHG Prime.</p>
+        </div>
+      </li>
+      <li class="ev reveal">
+        <div class="ev-date"><b>01.11</b><small>2026</small></div>
+        <div class="ev-card ev-photo"><img src="assets/img/books.webp" alt="Writer Georgi Gospodinov at Story Cups with signed books" width="800" height="1000" loading="lazy">
+          <div><p class="ev-title" data-i18n="mom.t2">Първата ни неделя</p>
+          <p data-i18n="mom.e2">От 1 ноември работим и в неделя. За Деня на народните будители подарихме на гостите 20 книги с автограф от Георги Господинов, който ни гостува.</p></div>
+        </div>
+      </li>
+      <li class="ev reveal">
+        <div class="ev-date"><b>11–13.09</b><small>2026</small></div>
+        <div class="ev-card ev-photo"><img src="assets/img/booth.webp" alt="Story Cups stand at Good Coffee Festival" width="800" height="1000" loading="lazy">
+          <div><p class="ev-title">Good Coffee Festival</p>
+          <p data-i18n="mom.e3">Три дни пред НДК на първия specialty coffee фестивал в България. Много кафе, дегустации и истории.</p></div>
+        </div>
+      </li>
+      <li class="ev reveal">
+        <div class="ev-date"><b data-i18n="mom.may">Май</b><small>2026</small></div>
+        <div class="ev-card ev-photo"><img src="assets/img/giro.webp" alt="Illustration of a cyclist carrying coffee cups" width="660" height="800" loading="lazy">
+          <div><p class="ev-title">Sofia welcomes Giro d’Italia</p>
+          <p data-i18n="mom.e4">We’ll take care of the coffee. Fueling your Sunday, Italian style.</p></div>
+        </div>
+      </li>
+      <li class="ev reveal">
+        <div class="ev-date"><b>26.04</b><small>2026</small></div>
+        <div class="ev-card ev-photo"><img src="assets/img/interior.webp" alt="Inside Story Cups: the bar and the menu board" width="800" height="1000" loading="lazy">
+          <div><p class="ev-title" data-i18n="mom.t5">Specialty coffee &amp; latte art workshop</p>
+          <p data-i18n="mom.e5">Лекция за произхода на кафето и затоплянето на млякото, после практика: еспресо, капучино и домашно бадемово мляко.</p></div>
+        </div>
+      </li>
+    </ol>
+    <p class="award reveal"><svg aria-hidden="true"><use href="#spark"/></svg><span data-i18n="mom.award">Story Cups в European Coffee Trip Awards 2026</span></p>
+  </div>
+</section>
+
+<!-- VISIT -->
+<section class="visit" id="visit" aria-labelledby="visit-title">
+  <div class="wrap visit-grid">
+    <div class="visit-copy reveal">
+      <p class="kicker light" data-i18n="visit.kicker">Ела за кафе</p>
+      <h2 id="visit-title" class="h-xl light" data-i18n="visit.title">Може да си тръгнеш <span class="script">с история.</span></h2>
+      <address>
+        <a class="vrow" href="https://www.google.com/maps/search/?api=1&amp;query=Story%20Cups%20Specialty%20Coffee&amp;query_place_id=ChIJQ7uGRQCFqkARFrf8vcHq7A4" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#pin"/></svg><span data-i18n="visit.addr">ул. „Цар Иван Асен II“ 20<br>кв. Яворов, 1124 София</span></a>
+        <a class="vrow" href="tel:+359887996962"><svg aria-hidden="true"><use href="#phone"/></svg><span>088 799 6962</span></a>
+        <a class="vrow" href="https://www.instagram.com/storycups.specialtycoffee/" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#ig"/></svg><span>@storycups.specialtycoffee</span></a>
+        <a class="vrow" href="https://www.facebook.com/StoryCupsSpecialtyCoffee/" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#fb"/></svg><span>Story Cups Specialty Coffee</span></a>
+      </address>
+      <p class="sunday"><span class="dot"></span><span data-i18n="visit.sunday">Вече отворено и в неделя</span></p>
+      <!-- TODO: opening hours, waiting for Google Maps screenshot from Victor -->
+    </div>
+    <figure class="visit-photo reveal">
+      <img src="assets/img/cheers.webp" alt="Guest raising a cup at the door of Story Cups" width="800" height="1000" loading="lazy">
+      <figcaption class="script">Cheers to the weekend!</figcaption>
+    </figure>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <p class="foot-big" aria-hidden="true">Brew your story.</p>
+  <div class="wrap foot-row">
+    <a class="brand" href="#top"><svg class="brand-mark" aria-hidden="true"><use href="#logo"/></svg><span class="brand-word">Story Cups<small>Specialty Coffee</small></span></a>
+    <img class="foot-hug" src="assets/img/hug.webp" alt="" width="700" height="867" loading="lazy">
+    <p class="foot-copy">© <span id="year">2026</span> Story Cups Specialty Coffee · <span data-i18n="foot.city">София</span></p>
+  </div>
+</footer>
+
+<script src="assets/app.js" defer></script>
+</body>
+</html>
