@@ -48,6 +48,7 @@
     'visit.title': 'You might leave <span class="script">with a story.</span>',
     'visit.addr': '20 Tsar Ivan Asen II St<br>Yavorov, 1124 Sofia',
     'visit.sunday': 'Now open on Sundays too',
+    'hours.wk': 'Monday – Friday', 'hours.sat': 'Saturday', 'hours.sun': 'Sunday', 'hours.today': 'today',
     'foot.city': 'Sofia'
   };
   var BG = {};
@@ -332,6 +333,16 @@
     deck.addEventListener('touchend', function (e) { if (dsx == null) return; var dx = e.changedTouches[0].clientX - dsx; dsx = null; if (Math.abs(dx) > 40) pull(); }, { passive: true });
     document.getElementById('pullBtn').addEventListener('click', pull);
   }
+
+  /* ---------------- hours: mark today (Sofia time) ---------------- */
+  (function () {
+    var box = document.getElementById('hours'); if (!box) return;
+    var day;
+    try { day = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].indexOf(new Intl.DateTimeFormat('en-US', { timeZone: 'Europe/Sofia', weekday: 'short' }).format(new Date())); } catch (e) { day = new Date().getDay(); }
+    box.querySelectorAll('[data-days]').forEach(function (row) {
+      if (row.getAttribute('data-days').split(',').indexOf(String(day)) > -1) row.classList.add('is-today');
+    });
+  })();
 
   /* ---------------- init ---------------- */
   var saved = null;
