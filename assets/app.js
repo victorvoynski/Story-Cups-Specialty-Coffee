@@ -17,7 +17,7 @@
     'perk.2t': 'Italian blends', 'perk.2': 'Exclusive blends from a family-run Italian coffee company with over 100 years of history.',
     'perk.3': 'Come with your dog.',
     'perk.4k': 'Sun', 'perk.4t': 'Sundays too', 'perk.4': 'Since 1 November, Story Cups is open on Sundays too.',
-    'menu.kicker': 'From the board behind the bar',
+    'menu.kicker': 'Coffee &amp; matcha',
     'menu.lead': 'Pick a drink and see your cup: size, price and extras.',
     'menu.drink': 'Drink',
     'menu.note1': '* With a specialty variety', 'menu.note2': '** With alternative milk',
