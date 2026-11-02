@@ -54,7 +54,7 @@
   };
   var BG = {};
   document.querySelectorAll('[data-i18n]').forEach(function (el) { BG[el.getAttribute('data-i18n')] = el.innerHTML; });
-  var TITLE = { bg: document.title, en: 'Story Cups Specialty Coffee · Sofia' };
+  var TITLE = { bg: document.title, en: 'Story Cups · Specialty coffee in Sofia' };
 
   function setLang(l) {
     var d = l === 'en' ? EN : BG;
