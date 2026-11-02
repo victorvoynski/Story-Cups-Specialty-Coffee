@@ -89,7 +89,7 @@
     var slides = story.querySelectorAll('.slide');
     var bars = story.querySelector('.story-bars');
     var toggle = story.querySelector('.story-toggle');
-    var DUR = 3200, i = 0, t = 0, last = 0, paused = false, held = false, visible = true;
+    var DUR = 2200, i = 0, t = 0, last = 0, paused = false, held = false, visible = true;
     var fills = [];
     slides.forEach(function () { var s = document.createElement('span'); var f = document.createElement('i'); s.appendChild(f); bars.appendChild(s); fills.push(f); });
     function show(n) {
