@@ -29,10 +29,6 @@
     'bag.house': 'The Story Cups house blend', 'bag.best': 'Bestseller', 'bag.mexico': 'Our bestseller',
     'bag.origin': 'Specialty coffee', 'bag.origin2': 'Specialty coffee', 'bag.origin3': 'Specialty coffee',
     'beans.note': 'Ask at the bar or order online from <a href="https://coffeebox.bg/collections/story-cups-specialty-coffee" target="_blank" rel="noopener">Coffeebox.bg</a>.',
-    'pull.kicker': 'At our stand, everyone draws their own story',
-    'pull.title': 'Pull a <span class="script">story.</span>',
-    'pull.lead': 'Little stories from the bar, just the way we tell them on Instagram.',
-    'pull.btn': 'Pull the next one',
     'mom.kicker': 'Beyond the cup',
     'mom.title': 'Good coffee, good people, <span class="script">good stories.</span>',
     'mom.next': 'Coming up',
@@ -64,7 +60,7 @@
     root.lang = l; document.title = TITLE[l];
     document.querySelectorAll('[data-lang]').forEach(function (b) { b.setAttribute('aria-pressed', String(b.getAttribute('data-lang') === l)); });
     lang = l;
-    renderMenu(); renderDeck(false);
+    renderMenu();
     try { localStorage.setItem('sc-lang', l); } catch (e) {}
   }
   var lang = 'bg';
@@ -282,59 +278,6 @@
       if (e.key === 'ArrowLeft') { shelf.scrollBy({ left: -260, behavior: 'smooth' }); e.preventDefault(); }
     });
   })();
-
-  /* ---------------- pull a story deck ---------------- */
-  // Lines are taken from Story Cups' own Instagram posts.
-  var STORIES = [
-    { img: 'sip', en: 'Coffee snob spotted in the wild.', bg: 'Coffee snob spotted in the wild.' },
-    { img: 'portafilter', en: 'Not all superheroes wear capes. Some carry a portafilter.', bg: 'Not all superheroes wear capes. Some carry a portafilter.' },
-    { img: 'grinder', en: 'Everything starts with precision. Then comes the aroma.', bg: 'Всичко започва с прецизност. После идва ароматът.' },
-    { img: 'heart', en: 'We don’t break hearts. Unless they’re chocolate and pistachio.', bg: 'Не разбиваме сърца. Освен ако не са от шоколад и шамфъстък.' },
-    { img: 'marzocco', en: 'The perfect shot. Literally.', bg: 'The perfect shot. Literally.' },
-    { img: 'snowflake', en: 'Snowflakes falling, coffee brewing, Christmas magic is here.', bg: 'Снежинките падат, кафето ухае и магията на Коледа е тук.' },
-    { img: 'coldbrew-bottle', en: 'Cold. Brew. Repeat.', bg: 'Cold. Brew. Repeat.' },
-    { img: 'honduras', en: 'Press play and dive into the aroma.', bg: 'Натисни play и се потопи в аромата.' }
-  ];
-  var deck = document.getElementById('deck'), countEl = document.getElementById('pullCount');
-  var order = STORIES.map(function (_, k) { return k; }), pos = 0, busy = false;
-  function cardHTML(s, k) {
-    return '<div class="stamp"><div class="card-img"><img src="assets/img/' + s.img + '.webp" alt="" width="800" height="1000" loading="lazy"></div>' +
-      '<p class="card-txt"></p></div><span class="card-no">no. ' + String(k + 1).padStart(2, '0') + '</span>';
-  }
-  function renderDeck() {
-    if (!deck) return;
-    deck.innerHTML = '';
-    var n = Math.min(4, order.length);
-    for (var j = n - 1; j >= 0; j--) {
-      var k = order[(pos + j) % order.length];
-      var c = document.createElement('div'); c.className = 'card';
-      c.innerHTML = cardHTML(STORIES[k], k);
-      c.querySelector('.card-txt').textContent = STORIES[k][lang];
-      c.style.setProperty('--i', j);
-      c.style.zIndex = String(10 - j);
-      if (j > 0) c.setAttribute('aria-hidden', 'true');
-      deck.appendChild(c);
-    }
-    if (countEl) countEl.textContent = String((pos % order.length) + 1).padStart(2, '0') + ' / ' + String(order.length).padStart(2, '0');
-  }
-  function pull() {
-    if (busy || !deck) return; busy = true;
-    var topCard = deck.lastElementChild;
-    topCard.classList.add('is-out');
-    // shift the rest up
-    Array.prototype.forEach.call(deck.children, function (c) {
-      if (c === topCard) return; var v = +c.style.getPropertyValue('--i'); c.style.setProperty('--i', v - 1);
-    });
-    setTimeout(function () { pos = (pos + 1) % order.length; renderDeck(); busy = false; }, reduce ? 150 : 520);
-  }
-  if (deck) {
-    deck.addEventListener('click', pull);
-    deck.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); pull(); } });
-    var dsx = null;
-    deck.addEventListener('touchstart', function (e) { dsx = e.touches[0].clientX; }, { passive: true });
-    deck.addEventListener('touchend', function (e) { if (dsx == null) return; var dx = e.changedTouches[0].clientX - dsx; dsx = null; if (Math.abs(dx) > 40) pull(); }, { passive: true });
-    document.getElementById('pullBtn').addEventListener('click', pull);
-  }
 
   /* ---------------- hours: mark today (Sofia time) ---------------- */
   (function () {
