@@ -165,20 +165,20 @@
   // Prices exactly as on the menu board in the café (EUR).
   // type: cup | small | glass | tall ; milk: has milk ; coffee: coffee-based
   var DRINKS = [
-    { n: 'Single Espresso', ml: 30, eur: 1.50, bgn: 2.93, cup: 'small', milk: 0, coffee: 1 },
-    { n: 'Double Espresso', ml: 60, eur: 1.80, bgn: 3.52, cup: 'small', milk: 0, coffee: 1 },
-    { n: 'Cappuccino', ml: 240, eur: 2.60, bgn: 5.09, cup: 'cup', milk: 1, coffee: 1 },
-    { n: 'Flat White', ml: 240, eur: 3.10, bgn: 6.06, cup: 'cup', milk: 1, coffee: 1 },
-    { n: 'Cortado', ml: 130, eur: 2.90, bgn: 5.67, cup: 'small', milk: 1, coffee: 1 },
-    { n: 'Latte', ml: 360, eur: 3.10, bgn: 6.06, cup: 'tall', milk: 1, coffee: 1 },
-    { n: 'Matcha Latte', ml: 240, eur: 3.20, bgn: 6.26, cup: 'cup', milk: 1, coffee: 0, matcha: 1 },
-    { n: 'V60', ml: 250, eur: 4.00, bgn: 7.82, cup: 'cup', milk: 0, coffee: 1, black: 1 },
-    { n: 'Cold Brew', ml: 200, eur: 4.50, bgn: 8.80, cup: 'glass', milk: 0, coffee: 1, black: 1 },
-    { n: 'Iced Latte', ml: 360, eur: 3.40, bgn: 6.65, cup: 'glass', milk: 1, coffee: 1 },
-    { n: 'Iced Matcha Latte', ml: 360, eur: 3.50, bgn: 6.85, cup: 'glass', milk: 1, coffee: 0, matcha: 1 },
-    { n: 'Caffè Leccese', ml: 40, eur: 2.30, bgn: 4.50, cup: 'glass', milk: 0, coffee: 1, black: 1 }
+    { n: 'Single Espresso', ml: 30, eur: 1.50, cup: 'small', milk: 0, coffee: 1 },
+    { n: 'Double Espresso', ml: 60, eur: 1.80, cup: 'small', milk: 0, coffee: 1 },
+    { n: 'Cappuccino', ml: 240, eur: 2.60, cup: 'cup', milk: 1, coffee: 1 },
+    { n: 'Flat White', ml: 240, eur: 3.10, cup: 'cup', milk: 1, coffee: 1 },
+    { n: 'Cortado', ml: 130, eur: 2.90, cup: 'small', milk: 1, coffee: 1 },
+    { n: 'Latte', ml: 360, eur: 3.10, cup: 'tall', milk: 1, coffee: 1 },
+    { n: 'Matcha Latte', ml: 240, eur: 3.20, cup: 'cup', milk: 1, coffee: 0, matcha: 1 },
+    { n: 'V60', ml: 250, eur: 4.00, cup: 'cup', milk: 0, coffee: 1, black: 1 },
+    { n: 'Cold Brew', ml: 200, eur: 4.50, cup: 'glass', milk: 0, coffee: 1, black: 1 },
+    { n: 'Iced Latte', ml: 360, eur: 3.40, cup: 'glass', milk: 1, coffee: 1 },
+    { n: 'Iced Matcha Latte', ml: 360, eur: 3.50, cup: 'glass', milk: 1, coffee: 0, matcha: 1 },
+    { n: 'Caffè Leccese', ml: 40, eur: 2.30, cup: 'glass', milk: 0, coffee: 1, black: 1 }
   ];
-  var EXTRA = { eur: 0.70, bgn: 1.37 };
+  var EXTRA = { eur: 0.70 };
   var cur = 'eur', sel = 2;
   var list = document.getElementById('drinks');
   var optSpec = document.getElementById('optSpec'), optMilk = document.getElementById('optMilk');
