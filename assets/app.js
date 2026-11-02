@@ -6,7 +6,7 @@
   /* ---------------- i18n ---------------- */
   var EN = {
     'skip': 'Skip to the menu',
-    'nav.menu': 'Menu', 'nav.beans': 'Coffee beans', 'nav.stories': 'Stories', 'nav.visit': 'Visit',
+    'nav.menu': 'Menu', 'nav.beans': 'Coffee beans', 'nav.stories': 'Stories', 'nav.visit': 'Contact',
     'hero.eyebrow': 'Specialty coffee · Yavorov, Sofia',
     'hero.sub': 'Where every cup tells a story. 20 Tsar Ivan Asen II St, a few minutes from Orlov Most.',
     'cta.menu': 'See the menu', 'cta.directions': 'Directions',
@@ -259,6 +259,8 @@
     function upd() {
       var c = shelf.scrollLeft + shelf.clientWidth / 2, best = 0, bd = 1e9;
       bags.forEach(function (b, k) { var m = b.offsetLeft + b.offsetWidth / 2; var dd = Math.abs(m - c); if (dd < bd) { bd = dd; best = k; } });
+      if (shelf.scrollLeft + shelf.clientWidth >= shelf.scrollWidth - 4) best = bags.length - 1;
+      if (shelf.scrollLeft <= 4) best = 0;
       dots.querySelectorAll('span').forEach(function (s, k) { s.classList.toggle('on', k === best); });
     }
     shelf.addEventListener('scroll', function () { requestAnimationFrame(upd); }, { passive: true });

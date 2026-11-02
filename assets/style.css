@@ -255,9 +255,9 @@ button{font:inherit;color:inherit;cursor:pointer}
 .card-txt{padding:16px 6px 8px;font-weight:600;font-size:clamp(17px,1.7vw,21px);line-height:1.25;letter-spacing:-.01em;min-height:5.2em;display:flex;align-items:center}
 .card:nth-child(3n+1) .card-txt,.card:nth-child(3n) .card-txt{color:var(--paper)}
 .card-no{position:absolute;top:24px;right:24px;font-family:var(--script);font-size:26px;color:#fff;text-shadow:0 1px 8px rgba(0,0,0,.5)}
-.deck .card{transform:translate(calc(var(--i)*7px),calc(var(--i)*-7px)) rotate(calc(var(--i)*2.2deg))}
+.deck .card{transform:translate(calc(var(--i)*-6px),calc(var(--i)*-7px)) rotate(calc(var(--i)*-2deg))}
 .deck .card.is-out{transform:translate(-115%,30px) rotate(-14deg);opacity:0}
-@media (max-width:760px){.pull-grid{grid-template-columns:1fr}.deck{width:min(86%,360px);margin-top:10px}}
+@media (max-width:860px){.pull-grid{grid-template-columns:1fr}.deck{width:min(84%,360px);margin-top:16px}}
 @media (prefers-reduced-motion:reduce){.card{transition:opacity .2s}}
 
 /* ---------- moments ---------- */
