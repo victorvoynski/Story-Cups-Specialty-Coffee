@@ -25,7 +25,6 @@
     'season.kicker': 'Seasonal · ask at the bar',
     'season.text': 'Homemade pumpkin syrup, warm spices and velvety coffee. Tell us if it’s love at first sip.',
     'cb.kicker': 'Small batch · 200 ml',
-    'cb.text': 'Our own bottled cold brew. Serve cold, pour over ice.',
     'cb.notes': 'Notes',
     'cb.peach': 'peach',
     'cb.lime': 'lime',
